@@ -1,0 +1,76 @@
+html{
+    background-image: url(../bg-doctor.png);
+    background-size: cover;
+}
+
+html,
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    display: block;
+}   
+
+body {
+    line-height: 1.317101995;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+    margin-left: 300px;
+    margin-top: 150px;
+    max-width: 30rem;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: lightskyblue;
+}
+
+h1 {
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+.centered-elements {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  position: static;
+  display: block;
+  height: 200px;
+  width: 200px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  overflow: hidden;
+  transition: all 500ms ease;
+  border: 2px solid black;
+  margin-bottom: 40px;
+  z-index: 0;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn:hover {
+  animation: shadow-pulse 1000ms 1;
+  background-color: #20e2d7;
+  color: #434343;
+}
+
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(32, 226, 215, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 8px 16px rgba(32, 226, 215, 0);
+  }
+}
