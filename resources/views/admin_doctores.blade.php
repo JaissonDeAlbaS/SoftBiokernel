@@ -162,7 +162,7 @@
                       <input type="date" name="nacimiento" class="form-control" id="dir_nacimiento" required>
                     </div>
                     <div class="form-group modal-footer">
-                        <input type="submit" name="save" class="btn btn-primary" value="Registrar Doctor"></input>
+                        <input type="submit" name="save" class="btn btn-primary" value="Actualizar Doctor"></input>
                         <button class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                       </div>
                   </form>
