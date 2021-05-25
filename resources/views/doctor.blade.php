@@ -100,6 +100,38 @@
           <button class="btn btn-primary" type="button" data-toggle='modal' data-target="#modal1">Registrar Pacientes</button><br>
 
           <p>ESPACIO PARA LA LA TABLA DE PACIENTES</p>
+          <div>
+            <table class="table table-striped table-hover table-info border-dark">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nombre Completo</th>
+                  <th scope="col">EPS</th>
+                  <th scope="col">Dirección</th>
+                  <th scope="col">Nombre Acompañante</th>
+                  <th scope="col">Telefono Acompañante</th>
+                  <th scope="col">Antecedentes Médicos</th>
+                  <th scope="col">Motivos Consulta</th>
+                  <th scope="col">Diagnóstico</th>
+                  <th scope="col">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Sit</td>
+                  <td>Amet</td>
+                  <td>Consectetur</td>
+                  <td>Sit</td>
+                  <td>Amet</td>
+                  <td>Consectetur</td>
+                  <td>Sit</td>
+                  <td>Amet</td>
+                  <td><button class="btn btn-primary" type="button" data-toggle='modal' data-target="#modal2">Preguntas</button><br></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>

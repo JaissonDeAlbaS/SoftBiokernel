@@ -94,8 +94,83 @@
 
           <button class="btn btn-primary" type="button" data-toggle='modal' data-target="#modal1">Registrar Doctor</button><br>
 
-          <p>ESPACIO PARA LA LA TABLA DE DOCTORES</p>
+          <div>
+            <br><h4>Doctores Registrados</h4>
+          </div>
 
+          <div>
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nombre Completo</th>
+                  <th scope="col">Dirección</th>
+                  <th scope="col">Telefono</th>
+                  <th scope="col">Tipo de Sangre</th>
+                  <th scope="col">Años de Experiencia</th>
+                  <th scope="col">Fecha de Nacimiento</th>
+                  <th scope="col">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Sit</td>
+                  <td>Amet</td>
+                  <td>Consectetur</td>
+                  <td>Sit</td>
+                  <td>Amet</td>
+                  <td>Consectetur</td>
+                  <td><button class="btn btn-primary" type="button" data-toggle='modal' data-target="#modal2">Editar</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="container_modal">
+            <div class="modal fade" tabindex="-1" id="modal2">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button class="close" data-dismiss="modal">&times;</button>
+                    <h3>Editar Doctor</h3>
+                  </div>
+                  <div class="modal-body">
+                  <form>                                
+                    <div class="form-group">
+                      <label for="dir_name">Nombre Completo</label>
+                      <input type="text" name="name" class="form-control" id="dir_name" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="dir_direccion">Dirección</label>
+                      <input type="text" name="direccion" class="form-control" id="dir_direccion" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="phone">Teléfono</label>
+                      <input type="tel" name="tel" class="form-control" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="dir_sangre">Tipo de Sangre</label>
+                      <input type="text" name="sangre" class="form-control" id="dir_sangre" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="dir_experiencia">Años de Experiencia</label>
+                      <input type="text" name="experiencia" class="form-control" id="dir_experiencia" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="dir_nacimiento">Fecha de nacimiento</label>
+                      <input type="date" name="nacimiento" class="form-control" id="dir_nacimiento" required>
+                    </div>
+                    <div class="form-group modal-footer">
+                        <input type="submit" name="save" class="btn btn-primary" value="Registrar Doctor"></input>
+                        <button class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                      </div>
+                  </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
