@@ -166,7 +166,7 @@
                       <input type="checkbox" id="otros3" name="checkbox">
                       <label for="otros3">Temblores</label><br>
                       <input type="checkbox" id="otros4" name="checkbox">
-                      <label for="otros4">Dolor Muscular</label><br>
+                      <label for="otros4">Dolor Múscular</label><br>
                     </div>
                     <div class="form-group modal-footer">
                         <input type="submit" name="save" class="btn btn-primary" value="Registrar Síntomas" onclick="covid()"></input>
