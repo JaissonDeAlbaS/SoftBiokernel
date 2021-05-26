@@ -121,10 +121,8 @@
                   <td>{{ $adoctores->direccion }}</td>
                   <td>{{ $adoctores->telefono }}</td>
                   <td>{{ $adoctores->rh }}</td>
+                  <td>{{ $adoctores->experiencia }}</td>
                   <td>{{ $adoctores->fecha_nacimiento }}</td>
-                  <td>
-                    <a href="{{ url('admin_doctores/' . $adoctores->id) . '/edit' }}" type="button">Actualizar</a>
-                  </td>
                   <td>
                     <form action="{{ url('admin_doctores/' . $adoctores->id) }}" method="post">
                       @csrf
