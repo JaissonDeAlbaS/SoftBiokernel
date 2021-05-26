@@ -46,15 +46,53 @@
         <div class="jumbotron">
             <h2>Hospital</h2>
             <br>
-            <form>
+            <form method="post" action="{{ url('/admin') }}">
+                @csrf
                 <div class="form-group">
                     <label for="dir_name">Nombre Hospital</label>
-                    <input type="text" name="name" class="form-control" id="nombre_hospital" required>
+
+                    <input type="text" name="name" class="form-control" id="name" value="{{ isset($hospital->name) ? $hospital->name : '' }}"  required>
+
                 </div>
+
                 <div class="form-group">
-                    <input type="submit" name="save" class="btn btn-primary" value="Registrar Hospital"></input>
+                    <input type="submit" class="btn btn-primary" value="Guardar"></input>
                 </div>
             </form>
+
+
+          <br><div><h4>Hospitlaes Registrados</h4></div>
+
+          <div>
+            <table class="table table-striped table-hover table-info border-dark">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nombre Hospital</th>
+                  <th scope="col">actualizar</th>
+                  <!-- <th scope="col">eliminar</th> -->
+                </tr>
+              </thead>
+                <tbody>
+                  @foreach ($hospitales as $hospital)
+                    <tr>
+                      <th scope="row">{{ $hospital->id }}</th>
+                      <td>{{ $hospital->name }}</td>
+                      <!-- <td>
+                        <a href="{{ url('admin/' . $hospital->id) . '/edit' }}" type="button">Actualizar</a>
+                      </td> -->
+                      <td>
+                        <form action="{{ url('admin/' . $hospital->id) }}" method="post">
+                            @csrf
+                            {{ method_field('DELETE') }}
+                            <button class="btn btn-link" type="submit" onclick="return confirm('¿Desea eliminar el hospital?')">Eliminar</button>
+                        </form>
+                      </td>
+                    </tr>
+                    @endforeach
+                  </tbody>
+              </table>
+            </div>      
         </div>
       </div>
     </div>

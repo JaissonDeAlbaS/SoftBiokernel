@@ -56,54 +56,55 @@
                     <h3>Agregar Doctor</h3>
                   </div>
                   <div class="modal-body">
-                  <form>                                
-                    <div class="form-group">
-                      <label for="dir_name">Nombre Completo</label>
-                      <input type="text" name="name" class="form-control" id="dir_name" required>
-                    </div>
-                    <div class="form-group">
-                      <label for="dir_EPS">EPS Asociada</label>
-                      <select name="EPS" class="form-control">
-                          <option>SURA</option>
-                          <option>COOMEVA</option>
-                          <option>SUSALUD</option>
-                          <option>CAFESALUD</option>
-                          <option>VIVA1A</option>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label for="dir_direccion">Dirección</label>
-                      <input type="text" name="direccion" class="form-control" id="dir_direccion" required>
-                    </div>
-                    <div class="form-group">
-                      <label for="dir_name_acompa">Nombre del Acompañante</label>
-                      <input type="text" name="name_acompa" class="form-control" id="dir_name_acompa" required>
-                    </div>
-                    <div class="form-group">
-                      <label for="phone_acompa">Teléfono del Acompañante</label>
-                      <input type="tel" name="tel_acompa" class="form-control" id="phone_acompa" required>
-                    </div>
-                    <div class="form-group">
-                      <label for="dir_antecedentes">Antecedentes Médicos</label>
-                      <select name="EPS" class="form-control">
-                          <option>Si</option>
-                          <option>No</option>
-                      </select>
-                      <input type="text" name="antecedentes" class="form-control" id="dir_antecedentes">
-                    </div>
-                    <div class="form-group">
-                      <label for="dir_motivos">Motivos de la Consulta</label>
-                      <input type="text" name="motivos" class="form-control" id="dir_motivos" required>
-                    </div>
-                    <div class="form-group">
-                      <label for="dir_diagnostico">Diagnóstico del Doctor</label>
-                      <input type="text" name="diagnostico" class="form-control" id="dir_diagnostico" required>
-                    </div>
-                    <div class="form-group modal-footer">
-                        <input type="submit" name="save" class="btn btn-primary" value="Registrar Doctor"></input>
+                  <form method="post" action="{{ url('/admin_pacientes') }}">
+                      @csrf                               
+                      <div class="form-group">
+                        <label for="dir_name">Nombre Completo</label>
+                        <input type="text" name="nombre_completo" class="form-control" id="nombre_completo" value="{{ isset($pacientes->nombre_completo) ? $pacientes->nombre_completo : '' }}" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="dir_EPS">EPS Asociada</label>
+                        <select name="EPS" class="form-control" value="{{ isset($pacientes->eps) ? $pacientes->eps : '' }}">
+                            <option>SURA</option>
+                            <option>COOMEVA</option>
+                            <option>SUSALUD</option>
+                            <option>CAFESALUD</option>
+                            <option>VIVA1A</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="dir_direccion">Dirección</label>
+                        <input type="text" name="direccion" class="form-control" id="direccion" value="{{ isset($pacientes->direccion) ? $pacientes->direccion : '' }}" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="dir_name_acompa">Nombre del Acompañante</label>
+                        <input type="text" name="nombre_acompañante" class="form-control" id="nombre_acompañante" value="{{ isset($pacientes->nombre_acompañante) ? $pacientes->nombre_acompañante : '' }}" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="phone_acompa">Teléfono del Acompañante</label>
+                        <input type="tel" name="telefono_acompañante" class="form-control" id="telefono_acompañante" value="{{ isset($pacientes->telefono_acompañante) ? $pacientes->telefono_acompañante : '' }}"required>
+                      </div>
+                      <div class="form-group">
+                        <label for="dir_antecedentes">Antecedentes Médicos</label>
+                        <select name="EPS" class="form-control">
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                        <input type="text" name="antecendentes" class="form-control" id="antecendentes" value="{{ isset($pacientes->antecendentes) ? $pacientes->antecendentes : '' }}">
+                      </div>
+                      <div class="form-group">
+                        <label for="dir_motivos">Motivos de la Consulta</label>
+                        <input type="text" name="motivos_consulta" class="form-control" id="motivos_consulta" value="{{ isset($pacientes->motivos_consulta) ? $pacientes->motivos_consulta : '' }}" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="dir_diagnostico">Diagnóstico del Doctor</label>
+                        <input type="text" name="diagnostico" class="form-control" id="diagnostico" value="{{ isset($pacientes->diagnostico) ? $pacientes->diagnostico : '' }}" required>
+                      </div>
+                      <div class="form-group modal-footer">
+                        <input type="submit" class="btn btn-primary" value="Guardar"></input>
                         <button class="btn btn-danger" data-dismiss="modal">Cancelar</button>
                       </div>
-                  </form>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -127,25 +128,33 @@
                   <th scope="col">Antecedentes Médicos</th>
                   <th scope="col">Motivos Consulta</th>
                   <th scope="col">Diagnóstico</th>
+                  <th scope="col">Eliminar</th>
                 </tr>
               </thead>
               <tbody>
+                @foreach ($Pacientes as $pacientes)
                 <tr>
-                  <th scope="row">1</th>
-                  <td>Sit</td>
-                  <td>Amet</td>
-                  <td>Consectetur</td>
-                  <td>Sit</td>
-                  <td>Amet</td>
-                  <td>Consectetur</td>
-                  <td>Sit</td>
-                  <td>Amet</td>
+                  <th scope="row">{{ $pacientes->id }}</th>
+                  <td>{{ $pacientes->nombre_completo }}</td>
+                  <td>{{ $pacientes->eps }}</td>
+                  <td>{{ $pacientes->direccion }}</td>
+                  <td>{{ $pacientes->telefono }}</td>
+                  <td>{{ $pacientes->nombre_acompañante }}</td>
+                  <td>{{ $pacientes->antecendentes }}</td>
+                  <td>{{ $pacientes->motivos_consulta }}</td>
+                  <td>{{ $pacientes->diagnostico }}</td>
+                  <td>
+                    <form action="{{ url('admin_pacientes/' . $pacientes->id) }}" method="post">
+                      @csrf
+                      {{ method_field('DELETE') }}
+                      <button class="btn btn-link" type="submit" onclick="return confirm('¿Desea eliminar el hospital?')">Eliminar</button>
+                    </form>
+                  </td>
                 </tr>
+                @endforeach
               </tbody>
             </table>
           </div>
-
-
         </div>
       </div>
     </div>
