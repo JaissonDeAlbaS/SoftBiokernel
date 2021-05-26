@@ -1,3 +1,15 @@
+<p align="center">Documentación Entrega Proyecto Final</p>
+<p align="center">De Alba Jaisson & Movilla Jesús</p>
+
+## Sobre el proyecto
+La empresa SoftBiokernel tiene la necesidad de construir para sus clientes del sector salud una aplicación web que permite controlar los pacientes que llegan al Triage por emergencia donde se le permita al doctor de turno registrar la información del paciente como datos principales, causa de la consulta, diagnóstico del doctor, se le preguntará un formulario al usuario con preguntas básicas para identificar si tiene COVID-19  o no. 
+
+## Descripción detallada sobre el proyecto
+Realización de un CRUD con tématica hospitalaria, desarrollado en el framework de código abierto, Laravel en conjunto con una base de datos MySql.
+En este CRUD podemos encontrar una vista para el administrador, el cual podrá registar un hospital y a su vez ingresar nuevos doctores y pacientes.
+Por otro lado tenemos la vista para los doctores, donde se podrá encontrar un registro de pacientes y a su vez un cuestionario para detectar posibles casos de COVID-19.
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
