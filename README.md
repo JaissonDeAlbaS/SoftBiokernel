@@ -11,7 +11,7 @@ Por otro lado tenemos la vista para los doctores, donde se podrá encontrar un r
 
 ## Manual de instalación
 
-Paso 1: Crear una base de datos en mysql con el nombre: SoftBiokernel
+Paso 1: Crear una base de datos en mysql con el nombre: softbiokernel
 
 Paso 2: Ejecutar las migraciones con el siguiente comando: php artisan migrate
 
