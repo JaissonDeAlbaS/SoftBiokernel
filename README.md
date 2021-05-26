@@ -9,6 +9,14 @@ Realización de un CRUD con tématica hospitalaria, desarrollado en el framework
 En este CRUD podemos encontrar una vista para el administrador, el cual podrá registar un hospital y a su vez ingresar nuevos doctores y pacientes.
 Por otro lado tenemos la vista para los doctores, donde se podrá encontrar un registro de pacientes y a su vez un cuestionario para detectar posibles casos de COVID-19.
 
+## Manual de instalación
+
+Paso 1: Crear una base de datos en mysql con el nombre: softbiokernel
+
+Paso 2: Ejecutar las migraciones con el siguiente comando: php artisan migrate
+
+Paso 3: Ejecutar el servidor de laravel con el siguiente comando: php artisan serve
+
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
